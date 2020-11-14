@@ -78,6 +78,12 @@
   background-color: #a7874b;
 }
 
+@media only screen and (min-width: 561px) and (max-width: 999px) {
+  .SearchBar-fields {
+    width: 80%;
+  }
+}
+
 @media only screen and (max-width: 560px) {
   .SearchBar {
     background-image: url("./background_search_mobile.jpg");
