@@ -50,3 +50,8 @@
   font-size: 0.88rem;
   line-height: 1rem;
 }
+
+.Business a {
+  text-decoration: none;
+  color: #000;
+}

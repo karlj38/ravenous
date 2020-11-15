@@ -8,6 +8,7 @@ class SortByOptions extends React.Component {
       "Best Match": "best_match",
       "Highest Rated": "rating",
       "Most Reviewed": "review_count",
+      Distance: "distance",
     };
     // this.handleSortbyChange = this.handleSortbyChange.bind(this);
     this.handleTermChange = this.handleTermChange.bind(this);
@@ -25,7 +26,15 @@ class SortByOptions extends React.Component {
   }
 
   handleSortbyChange(sortByOption) {
-    this.setState({ sortBy: sortByOption });
+    this.setState({ sortBy: sortByOption }, () => {
+      if (this.state.location) {
+        this.props.searchYelp(
+          this.state.term,
+          this.state.location,
+          this.state.sortBy
+        );
+      }
+    });
   }
 
   handleTermChange(event) {
@@ -37,12 +46,16 @@ class SortByOptions extends React.Component {
   }
 
   handleSearch(event) {
-    this.props.searchYelp(
-      this.state.term,
-      this.state.location,
-      this.state.sortBy
-    );
-    event.preventDefault();
+    if (this.state.location) {
+      this.props.searchYelp(
+        this.state.term,
+        this.state.location,
+        this.state.sortBy
+      );
+      if (event) {
+        event.preventDefault();
+      }
+    }
   }
 
   renderSortByOptions() {
