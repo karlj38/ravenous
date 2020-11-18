@@ -1,5 +1,15 @@
 import React from "react";
 import "./Business.css";
+import rating0 from "./img/regular_0.png";
+import rating1 from "./img/regular_1.png";
+import rating15 from "./img/regular_1_half.png";
+import rating2 from "./img/regular_2.png";
+import rating25 from "./img/regular_2_half.png";
+import rating3 from "./img/regular_3.png";
+import rating35 from "./img/regular_3_half.png";
+import rating4 from "./img/regular_4.png";
+import rating45 from "./img/regular_4_half.png";
+import rating5 from "./img/regular_5.png";
 
 class Business extends React.Component {
   constructor(props) {
@@ -10,25 +20,25 @@ class Business extends React.Component {
   displayRating(rating) {
     switch (rating) {
       case 0:
-        return "/img/regular_0.png";
+        return rating0;
       case 1:
-        return "/img/regular_1.png";
+        return rating1;
       case 1.5:
-        return "/img/regular_1_half.png";
+        return rating15;
       case 2:
-        return "/img/regular_3.png";
+        return rating2;
       case 2.5:
-        return "/img/regular_2_half.png";
+        return rating25;
       case 3:
-        return "/img/regular_3.png";
+        return rating3;
       case 3.5:
-        return "/img/regular_3_half.png";
+        return rating35;
       case 4:
-        return "/img/regular_4.png";
+        return rating4;
       case 4.5:
-        return "/img/regular_4_half.png";
+        return rating45;
       case 5:
-        return "/img/regular_5.png";
+        return rating5;
       default:
         break;
     }
