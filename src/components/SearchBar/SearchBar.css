@@ -90,8 +90,12 @@
   }
 
   .SearchBar-sort-options ul {
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .SearchBar-sort-options li {
+    padding: 1rem;
   }
 
   .SearchBar-fields {
@@ -102,5 +106,13 @@
   .SearchBar-fields input {
     margin-right: 0;
     margin-bottom: 0.86rem;
+  }
+
+  .BusinessList {
+    margin: 4rem 5%;
+  }
+
+  .Business {
+    width: 100%;
   }
 }
